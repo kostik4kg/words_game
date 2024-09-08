@@ -28,7 +28,6 @@ export class WorldFields extends PIXI.Container {
         }
       }
     }
-    console.log(globals.words);
     EE.emit("clear_word");
     this.chekWin();
 
@@ -38,9 +37,6 @@ export class WorldFields extends PIXI.Container {
     const isWin = globals.gameDate.words.every((word, i) => {
       return globals.words[i][word][1];
     })
-    // if (globals.words.every(item => item[1])) {
-    //   console.log("WIIIIN");
-    // }
     if (isWin) {
       EE.emit("show_win");
     }
@@ -77,7 +73,7 @@ export class WorldFields extends PIXI.Container {
       this.currentWord.position.set(250, 50);
     } else {
       this.position.set(globals.game_width / 2, 150);
-      this.currentWord.position.set(0, 750);
+      this.currentWord.position.set(0, globals.game_height / 2 + 250);
     }
 
   }

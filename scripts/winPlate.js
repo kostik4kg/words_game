@@ -76,10 +76,8 @@ export class WinPlate extends PIXI.Container {
 
   resize = () => {
     if (globals.is_landscape) {
-      console.log("11");
       this.textConteiner.position.set(globals.game_width / 2, globals.game_height / 2);
     } else {
-      console.log("22");
       this.textConteiner.position.set(globals.game_width / 2, globals.game_height / 2);
     }
   }

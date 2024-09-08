@@ -14,12 +14,11 @@ export class Cell extends PIXI.Sprite {
     this.title.anchor.set(0.5);
     this.title.position.set(this.width / 2, this.height / 2);
     this.title.visible = false;
-    if (this.spec) console.log(this.title);
+
     this.addChild(this.title);
   }
 
   updateText = (text) => {
-    console.log(this.title, text);
     this.visible = true;
     this.title.visible = true;
     this.title.text = text;

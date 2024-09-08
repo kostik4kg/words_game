@@ -4,7 +4,7 @@ export class App {
   constructor() {
     this.canvas = document.getElementById("root");
     this.app = new PIXI.Application({ width: 1080, height: 1920, view: this.canvas, background: 0x2B344B });
-    console.log(this.app);
+
     window.onresize = this.resize;
     window.onorientationchange = this.resize;
 
@@ -24,7 +24,6 @@ export class App {
       "index.html",
       "",
     );
-    console.log(url);
     PIXI.Assets.add('main_assets', `${url}images/main_atlas.json`);
     PIXI.Assets.add("wag_world", `${url}font/VAG World Bold.ttf`)
     // Allow the assets to load in the background
@@ -73,7 +72,6 @@ export class App {
         style.marginTop = "0";
         style.marginLeft = `${margin}px`;
       } else {
-        console.log("????55555");
         width = document.body.clientWidth;
         height = (document.body.clientWidth / gameWidth) * gameHeight;
         margin = (document.body.clientHeight - height) / 2;

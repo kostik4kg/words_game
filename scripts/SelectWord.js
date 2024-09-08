@@ -34,7 +34,6 @@ export class SelectWord extends PIXI.Container {
         item.hide();
       }
     })
-    console.log(globals.currentWord);
   }
 
   hide = () => {

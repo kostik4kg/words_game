@@ -137,8 +137,6 @@ export class Game extends PIXI.Container {
 
         globals.observer.notify_all();
       }
-
-      console.log("over ", item, globals.currentWord);
     });
 
     EE.on("clear_btn", () => {
@@ -165,7 +163,7 @@ export class Game extends PIXI.Container {
   pointerControll = () => {
     document.addEventListener("pointerup", () => {
       globals.isPressed = false;
-      console.log(EE);
+
       EE.emit("chek_word");
       EE.emit("clear_btn");
       globals.currentWord = [];
@@ -192,7 +190,7 @@ export class Game extends PIXI.Container {
       this.bg.position.set(1920 / 1.5, 1080 / 2);
       this.levelTitle.position.set(globals.game_width / 2, 100);
     } else {
-      this.bg.position.set(1080 / 2, 1920 / 2 + 450);
+      this.bg.position.set(1080 / 2, 1920 / 2 + 850);
       this.levelTitle.position.set(globals.game_width / 2, 100);
     }
   }
