@@ -192,7 +192,7 @@ export class Game extends PIXI.Container {
       this.bg.position.set(1920 / 1.5, 1080 / 2);
       this.levelTitle.position.set(globals.game_width / 2, 100);
     } else {
-      this.bg.position.set(1080 / 2, 1920 / 2 + 250);
+      this.bg.position.set(1080 / 2, 1920 / 2 + 450);
       this.levelTitle.position.set(globals.game_width / 2, 100);
     }
   }
