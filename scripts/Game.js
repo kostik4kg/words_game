@@ -133,7 +133,7 @@ export class Game extends PIXI.Container {
       else if (globals.currentWord[globals.currentWord.length - 2][0] === item) {
         globals.currentWord[globals.currentWord.length - 1][2].texture = PIXI.Texture.from("round_2");
 
-        const btn = globals.currentWord.splice(-1, 1);
+        globals.currentWord.splice(-1, 1);
 
         globals.observer.notify_all();
       }
@@ -187,10 +187,10 @@ export class Game extends PIXI.Container {
     this.wordsFields.resize();
     this.winPlate.resize();
     if (globals.is_landscape) {
-      this.bg.position.set(1920 / 1.5, 1080 / 2);
+      this.bg.position.set(globals.game_width / 1.5, globals.game_height / 2);
       this.levelTitle.position.set(globals.game_width / 2, 100);
     } else {
-      this.bg.position.set(1080 / 2, 1920 / 2 + 850);
+      this.bg.position.set(globals.game_width / 2, globals.game_height - 350);
       this.levelTitle.position.set(globals.game_width / 2, 100);
     }
   }

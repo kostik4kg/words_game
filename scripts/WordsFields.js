@@ -73,7 +73,7 @@ export class WorldFields extends PIXI.Container {
       this.currentWord.position.set(250, 50);
     } else {
       this.position.set(globals.game_width / 2, 150);
-      this.currentWord.position.set(0, globals.game_height / 2 + 250);
+      this.currentWord.position.set(0, globals.game_height - 800);
     }
 
   }

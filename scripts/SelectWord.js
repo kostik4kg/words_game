@@ -27,6 +27,7 @@ export class SelectWord extends PIXI.Container {
     }
   }
   onStateUpdate = () => {
+    this.position.x = -25 * globals.currentWord.length;
     this.cells.forEach((item, i) => {
       if (globals.currentWord[i]) {
         item.updateText(globals.currentWord[i][0]);
