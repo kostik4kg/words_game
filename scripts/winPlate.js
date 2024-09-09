@@ -26,7 +26,7 @@ export class WinPlate extends PIXI.Container {
     bg.anchor.set(0.5);
     // bg.alpha = 0.7;
     bg.tint = 0x2B344B;
-    bg.position.set(1920 / 2, 1080 / 2);
+    bg.position.set(1920 / 2, 1920 / 2);
     this.addChild(bg);
 
     const text = new PIXI.Text(`Уровень ${globals.level + 1} пройден`, {
@@ -78,7 +78,7 @@ export class WinPlate extends PIXI.Container {
     if (globals.is_landscape) {
       this.textConteiner.position.set(globals.game_width / 2, globals.game_height / 2);
     } else {
-      this.textConteiner.position.set(globals.game_width / 2, globals.game_height / 2);
+      this.textConteiner.position.set(globals.game_width / 2, globals.game_width / 2);
     }
   }
 }
